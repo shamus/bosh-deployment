@@ -9,6 +9,8 @@ image_resource:
 params:
   UPDATING_OPS_FILE: false
   FILE_TO_UPDATE: ~
+  UPDATING_SOURCE_RELEASE: false
+  SOURCE_RELEASE_FILE: ~
 
 inputs:
   - name: bosh-deployment

@@ -138,8 +138,8 @@ jobs:
         - get: bosh-deployment
         - get: bpm-release
           trigger: true
-          version:
-            version: "0.12.3"
+          #version:
+          #  version: "0.12.3"
         - get: warden-ubuntu-xenial-stemcell
           passed: [update-warden-stemcell]
           trigger: true
@@ -182,6 +182,8 @@ jobs:
         params:
           UPDATING_OPS_FILE: true
           FILE_TO_UPDATE: credhub.yml
+          UPDATING_SOURCE_RELEASE: true
+          SOURCE_RELEASE_FILE: misc/source-releases/credhub.yml
       - put: compiled-releases
         params:
           file: "compiled-release/*.tgz"
